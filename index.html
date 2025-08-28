@@ -18,15 +18,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
-        .font-outfit {
+        .font-hind {
             font-family: "hind-madurai", sans-serif;
         }
     </style>
-    <title>Document</title>
+    <title>জরুরি সেবা ডাইরেক্টরি</title>
 </head>
 
-<body>
-    <h1>hello</h1>
+<body class="font-hind bg-[#f4f5f7] min-h-screen">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- left -->
+            <div class="flex items-center gap-3">
+                <!-- placeholder logo circle -->
+                <div class="w-9 h-9 rounded-full grid place-items-center text-white text-sm">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-none">Emergency <br>Service</h1>
+                </div>
+            </div>
+
+            <!-- right counters -->
+            <div class="flex items-center gap-5">
+                <div class="flex items-center gap-2">
+                    <span id="heart-count" class="font-semibold">0</span>
+                    <i class="fa-solid fa-heart text-rose-600"></i>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="coin-count" class="font-semibold">100</span>
+                    <i class="fa-solid fa-coins text-yellow-500"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs bg-green-700 text-white">2 Copy</span>
+            </div>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <header class="bg-gradient-to-br from-green-700 via-green-800 to-emerald-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-10 text-center">
+            <!-- “relevant logo” top-center -->
+            <div class="w-16 h-16 mx-auto rounded-full grid place-items-center">
+                <img src="./assets/logo-dark.png" alt="">
+            </div>
+
+            <h2 class="mt-4 text-2xl md:text-3xl font-extrabold tracking-tight">
+                জরুরি সেবা ডাইরেক্টরি
+            </h2>
+            <p class="mt-2 text-sm opacity-90">
+                Government Emergency Services at Your Fingertip — A Project by the Government of the People’s Republic
+                of
+                Bangladesh
+            </p>
+        </div>
+    </header>
+
 </body>
 
 </html>
