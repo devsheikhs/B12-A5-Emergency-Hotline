@@ -72,7 +72,7 @@ cardContainer.addEventListener("click", async function (e) {
         // Bangla messages
         alert(
             ok
-                ? `নম্বর কপি হয়েছে: ${number}`            // or add a space after : if you prefer
+                ? `নম্বর কপি হয়েছে: ${number}`
                 : `কপি করা যায়নি। অনুগ্রহ করে নিজে কপি করুন: ${number}`
         );
         return;
