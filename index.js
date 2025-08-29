@@ -81,7 +81,9 @@ cardContainer.addEventListener("click", async function (e) {
 
     // Call -> alert + coin check/deduct + add to history with time
     if (callBtn) {
-        const name = callBtn.getAttribute("data-name");
+        const card = callBtn.closest("article");
+        const nameBn = card.querySelector(".service-bn")?.textContent.trim();
+        const nameEn = card.querySelector(".service-en")?.textContent.trim();
         const number = callBtn.getAttribute("data-number");
 
         if (coinCount < 20) {
@@ -89,19 +91,19 @@ cardContainer.addEventListener("click", async function (e) {
             return;
         }
 
-        // Deduct coins
         coinCount -= 20;
         updateCounters();
 
-        // Call alert
-        alert(`📞Calling ${name} at ${number}...`);
+        // English for the alert; fall back to Bangla if missing
+        const displayName = nameEn || nameBn;
+        alert(`📞Calling ${displayName} at ${number}...`);
 
         // Time (exact local time)
         const now = new Date();
         const timeText = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 
-        // Add to history
-        addHistoryItem(name, number, timeText);
+        // Bangla in call history; fall back to English if needed
+        addHistoryItem(nameBn || nameEn, number, timeText);
         return;
     }
 });
